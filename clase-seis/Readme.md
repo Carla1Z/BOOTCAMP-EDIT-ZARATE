@@ -89,7 +89,6 @@ persona["nombre"]
 # Noticias
 
 * Ahora hay un lenguaje que sale como alternativa al json que se llama toon (token object notatatiions) 
-  * Bien ahi Julian
   * https://github.com/toon-format/toon
 
 # Python
