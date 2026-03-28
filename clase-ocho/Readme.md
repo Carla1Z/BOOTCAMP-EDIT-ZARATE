@@ -433,74 +433,9 @@ Haceme un proyecto en python con django (el archivo principal se llama django-de
 
 * Me hizo esto
 
-```
-import os
-import sys
-import django
-from django.conf import settings
-from django.urls import path
-from django.http import HttpResponse
-from django.core.management import execute_from_command_line
+<img width="1896" height="908" alt="image" src="https://github.com/user-attachments/assets/479aa919-8db9-4054-8af4-d52c45a6e488" />
+<img width="1567" height="907" alt="image" src="https://github.com/user-attachments/assets/b785f0f1-754c-4573-9576-59ece8d17c1f" />
 
-# -----------------------------------------------------------------------------
-# 1. CONFIGURACIÓN DE DJANGO (SIN BASE DE DATOS)
-# -----------------------------------------------------------------------------
-settings.configure(
-    DEBUG=True,
-    SECRET_KEY='una-clave-secreta-para-demo',
-    ROOT_URLCONF=__name__,
-    INSTALLED_APPS=[],  # Sin apps, sin DB
-    MIDDLEWARE=[
-        'django.middleware.security.SecurityMiddleware',
-        'django.middleware.common.CommonMiddleware',
-    ],
-)
-
-django.setup()
-
-# -----------------------------------------------------------------------------
-# 2. VISTAS
-# -----------------------------------------------------------------------------
-
-def home(request):
-    html = """
-    <html>
-        <head><title>Django Demo</title></head>
-        <body style="font-family: sans-serif; text-align: center; padding: 50px;">
-            <h1 style="color: #0C4B33;">¡Hola Mundo desde Django!</h1>
-            <p>Proyecto limpio, sin base de datos innecesaria.</p>
-            <hr>
-            <a href="/about/" style="text-decoration: none; background: #0C4B33; color: white; padding: 10px 20px; border-radius: 5px;">Ir a "Sobre Nosotros"</a>
-        </body>
-    </html>
-    """
-    return HttpResponse(html)
-
-def about(request):
-    return HttpResponse("<h1>Página Sobre Nosotros</h1><p>Este es un ejemplo de routing en Django.</p><br><a href='/'>Volver al inicio</a>")
-
-def api_demo(request):
-    import json
-    data = {"mensaje": "Esto es una respuesta JSON", "status": "ok", "version": "1.0"}
-    return HttpResponse(json.dumps(data), content_type="application/json")
-
-# -----------------------------------------------------------------------------
-# 3. URLS
-# -----------------------------------------------------------------------------
-
-urlpatterns = [
-    path('', home, name='home'),
-    path('about/', about, name='about'),
-    path('api/', api_demo, name='api'),
-]
-
-# -----------------------------------------------------------------------------
-# 4. EJECUCIÓN
-# -----------------------------------------------------------------------------
-
-if __name__ == '__main__':
-    execute_from_command_line(sys.argv)
-```
 
 > OJO: Esta es la segunda interaccion, a la primera me puso una base de datos que ni siquiera usaba y no se la pedi. En general el codigo que genera la IA hay que chequearlo, adaptarlo, iterarlo
 
